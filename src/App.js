@@ -67,7 +67,7 @@ render() {
       </div>
 
       <div className="Question">
-        <p className="Question-prompt">The Birth of Venus - mid 1480's</p>
+        <p className="Question-prompt">The Birth of Venus <br /> - mid 1480's</p>
         <img className="Question-image" src="https://imgc.allpostersimages.com/img/print/u-g-Q1GA2DM0.jpg?w=550&h=550&p=0" alt="spooky man" />
 
        {
@@ -78,10 +78,10 @@ render() {
             </div>
           ): (
             <div className="Question-options">
-            <button onClick={() => this.onCorrectAnswer(1)}>1. Maximilien Luce</button>
-            <button onClick={() => this.onWrongAnswer(1)}>2. Georges Seurat</button>
-            <button onClick={() => this.onWrongAnswer(1)}>3. Paul Signac</button>
-            <button onClick={() => this.onWrongAnswer(1)}>4. Charles Angrand</button>
+            <button onClick={() => this.onCorrectAnswer(1)}>1. Sandro Botticelli</button>
+            <button onClick={() => this.onWrongAnswer(1)}>2. Leonardo da Vinci</button>
+            <button onClick={() => this.onWrongAnswer(1)}>3. Titian</button>
+            <button onClick={() => this.onWrongAnswer(1)}>4. Michelangelo</button>
           </div>
           )
         }
@@ -89,8 +89,8 @@ render() {
       </div>
 
       <div className="Question">
-        <p className="Question-prompt">Besides dragonglass, what is the only other substance capable of defeating White Walkers?</p>
-        <img className="Question-image" src="https://i.imgur.com/m0u5VrG.jpg" alt="frosty boye"/>
+        <p className="Question-prompt">Christina's World</p>
+        <img className="Question-image" src="https://www.moma.org/media/W1siZiIsIjE2NTQ1NyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=64fb4feaaa506f2b" alt="frosty boye"/>
 
         {
           this.state.questionsAnswered[2] !== null? (
@@ -100,10 +100,10 @@ render() {
             </div>
           ):(
             <div className="Question-options">
-              <button onClick={() => this.onWrongAnswer(2)}>1. Weirwood</button>
-              <button onClick={() => this.onWrongAnswer(2)}>2. Wildfire</button>
-              <button onClick={() => this.onCorrectAnswer(2)}>3. Valyrian steel</button>
-              <button onClick={() => this.onWrongAnswer(2)}>4. Snowballs</button>
+              <button onClick={() => this.onWrongAnswer(2)}>1. Winslow Homer</button>
+              <button onClick={() => this.onWrongAnswer(2)}>2. Edward Hopper</button>
+              <button onClick={() => this.onWrongAnswer(2)}>3. Normam Rockwell</button>
+              <button onClick={() => this.onCorrectAnswer(2)}>4. Andrew Wyeth</button>
             </div>
           )
         }
@@ -111,7 +111,7 @@ render() {
       </div>
 
       <div className="Question">
-        <p className="Question-prompt">Which Stark family direwolf received the penalty for Joffrey being bitten?</p>
+        <p className="Question-prompt">The Sleepers - 1886</p>
         <img className="Question-image" src="https://i.imgur.com/QUkikLL.jpg" alt="doggo" />
 
         {
@@ -146,7 +146,7 @@ render() {
             <div className="Question-options">
               <button onClick={() => this.onCorrectAnswer(4)}>1. Ice</button>
               <button onClick={() => this.onWrongAnswer(4)}>2. Oathkeeper</button>
-              <button onClick={() => this.onWrongAnswer(4)}>3. Widow's Wail</button>
+              <button onClick={() => this.onWrongAnswer(4)}>3. Gustave Courbet</button>
               <button onClick={() => this.onWrongAnswer(4)}>4. Northguard</button>
             </div>
           )
