@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ol, ul {
+  list-style: none;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Style */
+
+.QuestionContainer {
+    display: flex;
+    flex-direction: column;
+    background: url('./winterfell-1.jpg') fixed no-repeat;
+    background-size: cover;
+}
+
+.Question {
+    background: rgba(255, 255, 255, 0.5);
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    font-family: sans-serif;
+    padding-right: 10px;
+
+    /* display each of these as a grid */
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+}
+
+.Question-prompt {
+    grid-column: 2;
+    font-size: 18pt;
+}
+
+.Question-image {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+}
+
+.Question-explanation {
+    /*
+    opacity: 0;
+    visibility: hidden;
+    */
+    transition: opacity 1s;
+    grid-row: 3;
+}
+
+.Question--answered .Question-explanation {
+    /*opacity: 1;*/
+}
+
+.Question-options {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2px;
+}
+
+.Question-options button {
+    background: whitesmoke;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.Question-options button:hover {
+    box-shadow: 0 0 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.Header {
+    font-family: 'Alex Brush', cursive;
+    font-size: 46pt;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.Guesses {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: white;
+    padding: 10px;
+    font-weight: bold;
 }
