@@ -15,22 +15,25 @@ class App extends Component {
     }
   }
 
-  onCorrectAnswer = () => {
+  onCorrectAnswer = (questionNumber) => {
+    this.state.questionsAnswered[questionNumber] = true;
     this.setState({
       correctGuessCount: this.state.correctGuessCount + 1
     })
   }
 
-  onWrongAnswer = () => {
+  onWrongAnswer = (questionNumber) => {
+    this.state.questionsAnswered[questionNumber] = false;
     this.setState({
       wrongGuessCount: this.state.wrongGuessCount + 1
     })
   }
 
 render() {
+  console.log('Rendering state: ', this.state)
   return (
     <div className="QuestionContainer">
-      <h1 className="Header">Who is the artist?</h1>
+      <h1 className="Header">Can you guess the artist?</h1>
       <div className="Guesses">
         {
           this.state.correctGuessCount === 4 ? (
@@ -42,21 +45,21 @@ render() {
       </div>
 
       <div className="Question">
-        <p className="Question-prompt">How did Daenerys Targaryen attempt to hatch her dragon eggs?</p>
+        <p className="Question-prompt">A Sunday on La Grande Jatte - 1884</p>
         <img className="Question-image" src="https://www.artic.edu/iiif/2/88d65792-afb3-c90b-56d7-6f95967fa731/full/1200,/0/default.jpg?w=1200&h=800&fit=crop" alt="dragon eggies" />
 
         {
           this.state.questionsAnswered[0] !== null ? (
             <div className="Question-explanation">
               <h2>{this.state.questionsAnswered[0] ? 'Correct!': 'Wrong :('}</h2>
-              At the end of Season 1, Daenerys Targaryen's dragon eggs were engulfed in fire, in an attempt to hatch them.
+              A Sunday on La Grande Jatte is Georges Seurat's most famous work. The french impressionist used a technique now known as pointilism.
             </div>
           ) : (
             <div className="Question-options">
-              <button onClick={() => this.onWrongAnswer(0)}>1. In a lightning storm</button>
-              <button onClick={() => this.onCorrectAnswer(0)}>2. In a fire</button>
-              <button onClick={() => this.onWrongAnswer(0)}>3. In an omelet</button>
-              <button onClick={() => this.onWrongAnswer(0)}>4. In a frozen cave</button>
+              <button onClick={() => this.onWrongAnswer(0)}>1. Maximilien Luce</button>
+              <button onClick={() => this.onCorrectAnswer(0)}>2. Georges Seurat</button>
+              <button onClick={() => this.onWrongAnswer(0)}>3. Paul Signac</button>
+              <button onClick={() => this.onWrongAnswer(0)}>4. Charles Angrand</button>
             </div>
           )
         }
@@ -64,21 +67,21 @@ render() {
       </div>
 
       <div className="Question">
-        <p className="Question-prompt">The phrase 'Valar Morghulis' or 'all men must die' is usually responded with:</p>
-        <img className="Question-image" src="https://i.imgur.com/zoTroXq.jpg" alt="spooky man" />
+        <p className="Question-prompt">The Birth of Venus - mid 1480's</p>
+        <img className="Question-image" src="https://imgc.allpostersimages.com/img/print/u-g-Q1GA2DM0.jpg?w=550&h=550&p=0" alt="spooky man" />
 
        {
           this.state.questionsAnswered[1] !== null ? (
-            <div className="Question-explanation">
+            <div className="Question-explanation Question--answered">
              <h2>{this.state.questionsAnswered[1] ? 'Correct!': 'Wrong :('}</h2>
               The Season 2 finale was named "Valar Morghulis" while the Season 3 premiere was named "Valar Dohaeris." In 2014, the Brewery Ommegang created a beer called "Valar Morghulis," with each cork fire-branded with the response.
             </div>
           ): (
             <div className="Question-options">
-            <button onClick={() => this.onCorrectAnswer(1)}>1. Valar Dohaeris or 'all men must serve'</button>
-            <button onClick={() => this.onWrongAnswer(1)}>2. Valar Rohnas or 'all men must live'</button>
-            <button onClick={() => this.onWrongAnswer(1)}>3. Valar GoGo or 'all men must dance'</button>
-            <button onClick={() => this.onWrongAnswer(1)}>4. Valar Kilmer or 'all men must act'</button>
+            <button onClick={() => this.onCorrectAnswer(1)}>1. Maximilien Luce</button>
+            <button onClick={() => this.onWrongAnswer(1)}>2. Georges Seurat</button>
+            <button onClick={() => this.onWrongAnswer(1)}>3. Paul Signac</button>
+            <button onClick={() => this.onWrongAnswer(1)}>4. Charles Angrand</button>
           </div>
           )
         }
