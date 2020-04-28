@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+class App extends Component {
+  state = {
+    correctGuessCount: 0,
+    wrongGuessCount: 0,
+    questionsAnswered: {
+      0: null,
+      1: null,
+      2: null,
+      3: null,
+      4: null
+    }
+  }
+
+render() {
   return (
     <div className="App">
       <header className="App-header">
@@ -21,6 +34,8 @@ function App() {
       </header>
     </div>
   );
+}
+
 }
 
 export default App;
