@@ -54,6 +54,7 @@ img {
 .Question-prompt {
     grid-column: 2;
     font-size: 18pt;
+    margin-top: 6px;
 }
 
 .Question-image {
@@ -79,6 +80,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2px;
+    margin-top: 3vh;
 }
 
 .Question-options button {
@@ -87,6 +89,7 @@ img {
     cursor: pointer;
     border-radius: 5px;
     border: none;
+    height: 3vh;
 }
 
 
@@ -95,7 +98,7 @@ img {
 }
 
 .Header {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Alex Brush', cursive;
     font-size: 40pt;
     text-align: center;
     margin-bottom: 30px;
@@ -108,4 +111,21 @@ img {
     background: white;
     padding: 10px;
     font-weight: bold;
+}
+
+.Results-Header {
+  font-family: 'Alex Brush', cursive;
+  font-size: 50pt;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 800px;
+  padding-top: 33vh;
+}
+
+.Results-Container {
+  background: rgb(238,221,174);
+  background: radial-gradient(circle, rgba(238,221,174,1) 0%, rgba(90,185,147,0.36738445378151263) 100%);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
 }

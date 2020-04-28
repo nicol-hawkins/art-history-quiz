@@ -29,8 +29,24 @@ class App extends Component {
     })
   }
 
+  renderQuizResults = () => {
+    return (
+      <div className="Results-Container">
+        <div className="Results-Header">
+          Great job! You got {this.state.correctGuessCount}/5.
+        </div>
+      </div>
+      
+    );
+  };
+
 render() {
   console.log('Rendering state: ', this.state)
+
+  if(this.state.correctGuessCount + this.state.wrongGuessCount > 4) {
+    return this.renderQuizResults();
+  }
+
   return (
     <div className="QuestionContainer">
       <h1 className="Header">Can you guess the artist?</h1>
@@ -45,14 +61,14 @@ render() {
       </div>
 
       <div className="Question">
-        <p className="Question-prompt">A Sunday on La Grande Jatte - 1884</p>
+        <p className="Question-prompt">Ophelia - 1852</p>
         <img className="Question-image" src="https://blogs.wright.edu/learn/fogdog/files/2019/05/image-for-item-4-John-Everret-Millais-Ophelia-painting-1851-52-use-with-Lauren-Reder-piece-1024x562.jpeg" alt="dragon eggies" />
 
         {
           this.state.questionsAnswered[0] !== null ? (
             <div className="Question-explanation">
-              <h2>{this.state.questionsAnswered[0] ? 'Correct!': 'Wrong :('}</h2>
-              A Sunday on La Grande Jatte is Georges Seurat's most famous work. The french impressionist used a technique now known as pointilism.
+              <h2>{this.state.questionsAnswered[0] ? <i>Correct!</i>: <i>Incorrect...</i>}</h2>
+              Sir John Everett Millais depicts Ophelia, a character from William Shakespear's play Hamlet, singing before she drowns in a river.
             </div>
           ) : (
             <div className="Question-options">
@@ -65,29 +81,6 @@ render() {
         }
        
       </div>
-
-      <div className="Question">
-        <p className="Question-prompt">The Birth of Venus <br /> - mid 1480's</p>
-        <img className="Question-image" src="https://imgc.allpostersimages.com/img/print/u-g-Q1GA2DM0.jpg?w=550&h=550&p=0" alt="spooky man" />
-
-       {
-          this.state.questionsAnswered[1] !== null ? (
-            <div className="Question-explanation Question--answered">
-             <h2>{this.state.questionsAnswered[1] ? 'Correct!': 'Wrong :('}</h2>
-              The Season 2 finale was named "Valar Morghulis" while the Season 3 premiere was named "Valar Dohaeris." In 2014, the Brewery Ommegang created a beer called "Valar Morghulis," with each cork fire-branded with the response.
-            </div>
-          ): (
-            <div className="Question-options">
-            <button onClick={() => this.onCorrectAnswer(1)}>1. Sandro Botticelli</button>
-            <button onClick={() => this.onWrongAnswer(1)}>2. Leonardo da Vinci</button>
-            <button onClick={() => this.onWrongAnswer(1)}>3. Titian</button>
-            <button onClick={() => this.onWrongAnswer(1)}>4. Michelangelo</button>
-          </div>
-          )
-        }
-
-      </div>
-
       <div className="Question">
         <p className="Question-prompt">Christina's World - 1948</p>
         <img className="Question-image" src="https://www.moma.org/media/W1siZiIsIjE2NTQ1NyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=64fb4feaaa506f2b" alt="frosty boye"/>
@@ -95,8 +88,8 @@ render() {
         {
           this.state.questionsAnswered[2] !== null? (
             <div className="Question-explanation">
-              <h2>{this.state.questionsAnswered[2] ? 'Correct!': 'Wrong :)'}</h2>
-              Valyrian Steel is not only exceptionally sharp, strong and free of maintenance, but is also capable of taking down an immortal White Walker. The metal is easily identified by its distinctive rippled pattern.
+              <h2>{this.state.questionsAnswered[2] ? <i>Correct!</i>: <i>Incorrect...</i>}</h2>
+              Andrew Wyeth's Christina's World is one of the best known American paintings of the middle 20th century.
             </div>
           ):(
             <div className="Question-options">
@@ -111,14 +104,60 @@ render() {
       </div>
 
       <div className="Question">
+        <p className="Question-prompt">The Birth of Venus ~ 1480's</p>
+        <img className="Question-image" src="https://imgc.allpostersimages.com/img/print/u-g-Q1GA2DM0.jpg?w=550&h=550&p=0" alt="spooky man" />
+
+       {
+          this.state.questionsAnswered[1] !== null ? (
+            <div className="Question-explanation Question--answered">
+             <h2>{this.state.questionsAnswered[1] ?  <i>Correct!</i>: <i>Incorrect...</i>}</h2>
+             The Birth of Venus is a painting by the Italian artist Sandro Botticelli, probably made in the mid 1480s. It depicts the goddess Venus arriving at the shore after her birth, when she had emerged from the sea fully-grown.
+            </div>
+          ): (
+            <div className="Question-options">
+            <button onClick={() => this.onCorrectAnswer(1)}>1. Sandro Botticelli</button>
+            <button onClick={() => this.onWrongAnswer(1)}>2. Leonardo da Vinci</button>
+            <button onClick={() => this.onWrongAnswer(1)}>3. Titian</button>
+            <button onClick={() => this.onWrongAnswer(1)}>4. Michelangelo</button>
+          </div>
+          )
+        }
+
+      </div>
+
+      <div className="Question">
+        <p className="Question-prompt">Torso of a Woman in the Sunlight - 1876</p>
+        <img className="Question-image" src="https://3wrxqs36sylaoef0l2imhgz1-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-2.59.28-PM-e1559934060106-670x402.png" alt="stay a-head, ned!" />
+
+        {
+          this.state.questionsAnswered[4] !== null ? (
+            <div className="Question-explanation">
+              <h2>{this.state.questionsAnswered[4] ? <i>Correct!</i>: <i>Incorrect...</i>}</h2>
+              Best known for portraiture, figurative work, and his series of voluptuous bathing women, Pierre-Auguste Renoir was among the first group of French Impressionist painters.
+            </div>
+          ):(
+            <div className="Question-options">
+              <button onClick={() => this.onWrongAnswer(4)}>1. Paul Cézanne</button>
+              <button onClick={() => this.onCorrectAnswer(4)}>2. Pierre-Auguste Renoir</button>
+              <button onClick={() => this.onWrongAnswer(4)}>3. Edgar Degas</button>
+              <button onClick={() => this.onWrongAnswer(4)}>4. Claude Monet</button>
+            </div>
+          )
+        }
+
+      </div>
+
+     
+
+      <div className="Question">
         <p className="Question-prompt">The Sleepers - 1886</p>
         <img className="Question-image" src="https://i.etsystatic.com/15350345/r/il/f44c98/1796876199/il_570xN.1796876199_swmq.jpg" alt="doggo" />
 
         {
           this.state.questionsAnswered[3] !== null ? (
             <div className="Question-explanation">
-              <h2>{this.state.questionsAnswered[3] ? 'Correct': 'Wrong'}</h2>
-              After the direwolf Nymeria flees into the woods following a defensive attack against Prince Joffrey, Cersei Lannister took her wrath out on the sister wolf, Lady.
+              <h2>{this.state.questionsAnswered[3] ? <i>Correct!</i>: <i>Incorrect...</i>}</h2>
+              Le Sommeil is an erotic oil painting on canvas by French artist Gustave Courbet created in 1866. The painting, which depicts a lesbian couple, is also known as the Two Friends and Indolence and Lust.
             </div>
           ):(
             <div className="Question-options">
@@ -132,27 +171,7 @@ render() {
 
       </div>
 
-      <div className="Question">
-        <p className="Question-prompt">What is the name of Ned Stark's greatsword?</p>
-        <img className="Question-image" src="https://3wrxqs36sylaoef0l2imhgz1-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-2.59.28-PM-e1559934060106-670x402.png" alt="stay a-head, ned!" />
-
-        {
-          this.state.questionsAnswered[4] !== null ? (
-            <div className="Question-explanation">
-              <h2>{this.state.questionsAnswered[4] ? 'Correct!': 'Wrong:('}</h2>
-              Ice was the official sword of the Lord of Winterfell, forged from Valyrian steel and handed down over the ages. It was subsequently melted down to forge two new swords – the Oathkeeper and Widow's Wail.
-            </div>
-          ):(
-            <div className="Question-options">
-              <button onClick={() => this.onWrongAnswer(4)}>1. Paul Cézanne</button>
-              <button onClick={() => this.onCorrectAnswer(4)}>2. Pierre-Auguste Renoir</button>
-              <button onClick={() => this.onWrongAnswer(4)}>3. Edgar Degas</button>
-              <button onClick={() => this.onWrongAnswer(4)}>4. Claude Monet</button>
-            </div>
-          )
-        }
-
-      </div>
+      
     </div>
   );
 }
