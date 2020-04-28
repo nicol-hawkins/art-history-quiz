@@ -46,7 +46,7 @@ render() {
 
       <div className="Question">
         <p className="Question-prompt">A Sunday on La Grande Jatte - 1884</p>
-        <img className="Question-image" src="https://www.artic.edu/iiif/2/88d65792-afb3-c90b-56d7-6f95967fa731/full/1200,/0/default.jpg?w=1200&h=800&fit=crop" alt="dragon eggies" />
+        <img className="Question-image" src="https://blogs.wright.edu/learn/fogdog/files/2019/05/image-for-item-4-John-Everret-Millais-Ophelia-painting-1851-52-use-with-Lauren-Reder-piece-1024x562.jpeg" alt="dragon eggies" />
 
         {
           this.state.questionsAnswered[0] !== null ? (
@@ -56,10 +56,10 @@ render() {
             </div>
           ) : (
             <div className="Question-options">
-              <button onClick={() => this.onWrongAnswer(0)}>1. Maximilien Luce</button>
-              <button onClick={() => this.onCorrectAnswer(0)}>2. Georges Seurat</button>
-              <button onClick={() => this.onWrongAnswer(0)}>3. Paul Signac</button>
-              <button onClick={() => this.onWrongAnswer(0)}>4. Charles Angrand</button>
+              <button onClick={() => this.onWrongAnswer(0)}>1. Dante Gabriel Rosetti</button>
+              <button onClick={() => this.onCorrectAnswer(0)}>2. Sir John Everett Millais</button>
+              <button onClick={() => this.onWrongAnswer(0)}>3. John Everett Millais</button>
+              <button onClick={() => this.onWrongAnswer(0)}>4. John William Waterhouse</button>
             </div>
           )
         }
@@ -89,7 +89,7 @@ render() {
       </div>
 
       <div className="Question">
-        <p className="Question-prompt">Christina's World</p>
+        <p className="Question-prompt">Christina's World - 1948</p>
         <img className="Question-image" src="https://www.moma.org/media/W1siZiIsIjE2NTQ1NyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ.jpg?sha=64fb4feaaa506f2b" alt="frosty boye"/>
 
         {
@@ -112,7 +112,7 @@ render() {
 
       <div className="Question">
         <p className="Question-prompt">The Sleepers - 1886</p>
-        <img className="Question-image" src="https://i.imgur.com/QUkikLL.jpg" alt="doggo" />
+        <img className="Question-image" src="https://i.etsystatic.com/15350345/r/il/f44c98/1796876199/il_570xN.1796876199_swmq.jpg" alt="doggo" />
 
         {
           this.state.questionsAnswered[3] !== null ? (
@@ -122,10 +122,10 @@ render() {
             </div>
           ):(
             <div className="Question-options">
-              <button onClick={() => this.onWrongAnswer(3)}>1. Ghost</button>
-              <button onClick={() => this.onCorrectAnswer(3)}>2. Lady</button>
-              <button onClick={() => this.onWrongAnswer(3)}>3. Nymeria</button>
-              <button onClick={() => this.onWrongAnswer(3)}>4. Summer</button>
+              <button onClick={() => this.onWrongAnswer(3)}>1. Honore Daumier</button>
+              <button onClick={() => this.onCorrectAnswer(3)}>2. Jean-Francois Millet</button>
+              <button onClick={() => this.onWrongAnswer(3)}>3. Gustave Courbet</button>
+              <button onClick={() => this.onWrongAnswer(3)}>4. Édouard Manet</button>
             </div>
           )
         }
@@ -134,7 +134,7 @@ render() {
 
       <div className="Question">
         <p className="Question-prompt">What is the name of Ned Stark's greatsword?</p>
-        <img className="Question-image" src="https://i.imgur.com/opChkVP.jpg" alt="stay a-head, ned!" />
+        <img className="Question-image" src="https://3wrxqs36sylaoef0l2imhgz1-wpengine.netdna-ssl.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-07-at-2.59.28-PM-e1559934060106-670x402.png" alt="stay a-head, ned!" />
 
         {
           this.state.questionsAnswered[4] !== null ? (
@@ -144,10 +144,10 @@ render() {
             </div>
           ):(
             <div className="Question-options">
-              <button onClick={() => this.onCorrectAnswer(4)}>1. Ice</button>
-              <button onClick={() => this.onWrongAnswer(4)}>2. Oathkeeper</button>
-              <button onClick={() => this.onWrongAnswer(4)}>3. Gustave Courbet</button>
-              <button onClick={() => this.onWrongAnswer(4)}>4. Northguard</button>
+              <button onClick={() => this.onWrongAnswer(4)}>1. Paul Cézanne</button>
+              <button onClick={() => this.onCorrectAnswer(4)}>2. Pierre-Auguste Renoir</button>
+              <button onClick={() => this.onWrongAnswer(4)}>3. Edgar Degas</button>
+              <button onClick={() => this.onWrongAnswer(4)}>4. Claude Monet</button>
             </div>
           )
         }
