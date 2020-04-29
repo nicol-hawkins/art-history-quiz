@@ -2,7 +2,6 @@
   "name": "js-quiz",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://nicol-hawkins.github.io/art-history-quiz",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -34,6 +33,7 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "http://nicol-hawkins.github.io/art-history-quiz",
   "devDependencies": {
     "gh-pages": "^2.2.0"
   }
