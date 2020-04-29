@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/art-history-quiz/static/css/main.1760c12f.chunk.css",
+    "main.js": "/art-history-quiz/static/js/main.ea9d3a1b.chunk.js",
+    "main.js.map": "/art-history-quiz/static/js/main.ea9d3a1b.chunk.js.map",
+    "runtime-main.js": "/art-history-quiz/static/js/runtime-main.3a45932b.js",
+    "runtime-main.js.map": "/art-history-quiz/static/js/runtime-main.3a45932b.js.map",
+    "static/js/2.63690ecd.chunk.js": "/art-history-quiz/static/js/2.63690ecd.chunk.js",
+    "static/js/2.63690ecd.chunk.js.map": "/art-history-quiz/static/js/2.63690ecd.chunk.js.map",
+    "index.html": "/art-history-quiz/index.html",
+    "precache-manifest.112621d818070f6109aec8eb4017338d.js": "/art-history-quiz/precache-manifest.112621d818070f6109aec8eb4017338d.js",
+    "service-worker.js": "/art-history-quiz/service-worker.js",
+    "static/css/main.1760c12f.chunk.css.map": "/art-history-quiz/static/css/main.1760c12f.chunk.css.map",
+    "static/js/2.63690ecd.chunk.js.LICENSE.txt": "/art-history-quiz/static/js/2.63690ecd.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/art-history-quiz/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3a45932b.js",
+    "static/js/2.63690ecd.chunk.js",
+    "static/css/main.1760c12f.chunk.css",
+    "static/js/main.ea9d3a1b.chunk.js"
+  ]
+}
