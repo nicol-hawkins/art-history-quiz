@@ -75,7 +75,7 @@ render() {
               <button onClick={() => this.onWrongAnswer(0)}>1. Dante Gabriel Rosetti</button>
               <button onClick={() => this.onCorrectAnswer(0)}>2. Sir John Everett Millais</button>
               <button onClick={() => this.onWrongAnswer(0)}>3. John Everett Millais</button>
-              <button onClick={() => this.onWrongAnswer(0)}>4. John William Waterhouse</button>
+              <button onClick={() => this.onWrongAnswer(0)}>4. John Waterhouse</button>
             </div>
           )
         }

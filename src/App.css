@@ -29,13 +29,11 @@ img {
 .QuestionContainer {
     display: flex;
     flex-direction: column;
-    background: rgb(238,221,174);
-    background: radial-gradient(circle, rgba(238,221,174,1) 0%, rgba(90,185,147,0.36738445378151263) 100%);
-    background-size: cover;
+    background-image: url('./lilypads.png');
 }
 
 .Question {
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(175, 165, 165, 0.5);
     width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -49,12 +47,14 @@ img {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-gap: 10px;
+    box-shadow: 8px 8px 6px 8px #888888;
 }
 
 .Question-prompt {
     grid-column: 2;
     font-size: 18pt;
     margin-top: 6px;
+    font-family: 'Nunito', sans-serif;
 }
 
 .Question-image {
@@ -90,6 +90,7 @@ img {
     border-radius: 5px;
     border: none;
     height: 3vh;
+    font-family: 'Nunito', sans-serif;
 }
 
 
@@ -98,7 +99,7 @@ img {
 }
 
 .Header {
-    font-family: 'Alex Brush', cursive;
+    font-family: 'Nunito', sans-serif;
     font-size: 40pt;
     text-align: center;
     margin-bottom: 30px;
@@ -114,7 +115,7 @@ img {
 }
 
 .Results-Header {
-  font-family: 'Alex Brush', cursive;
+  font-family: 'Nunito', sans-serif;
   font-size: 50pt;
   text-align: center;
   margin-bottom: 30px;
@@ -123,9 +124,6 @@ img {
 }
 
 .Results-Container {
-  background: rgb(238,221,174);
-  background: radial-gradient(circle, rgba(238,221,174,1) 0%, rgba(90,185,147,0.36738445378151263) 100%);
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
+  background: url('./lilypads.png');
+
 }
